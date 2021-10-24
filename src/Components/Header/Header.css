@@ -1,0 +1,21 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    height: 8rem;
+
+}
+
+.svg-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 4rem;
+}
+
+.svg-img-g {
+    background-color: red;   
+}
