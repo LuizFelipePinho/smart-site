@@ -1,0 +1,15 @@
+.title {
+    font-size: 2rem;
+    width: 16rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.message {
+    text-align: justify;
+    
+}

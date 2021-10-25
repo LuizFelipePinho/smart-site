@@ -4,7 +4,7 @@ const Logo = () => {
     return (
         <>
             <svg className="svg-img">
-                <g className="svg-img-g">
+                <g>
                     <path className="st0" d="M95,38.5V10.7c0-9.5,9.9-11.5,17-8.8v5.3c-4.9-2-10.4-1.5-10.4,4.6h7.9v5.3h-7.9v21.3L95,38.5z"/>
                     <path className="st0" d="M126.5,7.7h4.9l1,4.1h6.1v5.3h-5.4v12.3c0,2.5,1.1,3.7,3.2,3.7h3.4v5.3h-6.6c-4.4,0-6.7-2.4-6.7-7.1V7.7z"/>
                     <rect x="114.7" y="11.8" className="st0" width="6.7" height="26.6"/>
