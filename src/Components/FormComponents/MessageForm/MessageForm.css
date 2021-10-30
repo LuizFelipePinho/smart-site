@@ -1,0 +1,12 @@
+
+.box-message {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.message::first-letter{
+    text-transform: capitalize;
+}

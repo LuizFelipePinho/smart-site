@@ -1,0 +1,24 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.btn-serch-unit, .btn-clean {
+    text-transform: uppercase;
+    padding: 1rem 4rem 1rem 4rem;
+    border: none;
+    margin: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.btn-serch-unit{
+    background-color: #FFB612;
+}
+
+.btn-clean {
+    border: solid 1px rgba(0, 0, 0, 0.2) ;
+}
