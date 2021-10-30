@@ -1,15 +1,14 @@
 import React from "react";
 import './LineInput.css';
 
-const LineInput = ( {periodo, horario} ) => {
-
+const LineInput = ( {checked, periodo, horario, onChange} ) => {
 
     return(
         <div className="line-form"> 
-            <input type="radio" id="manha"/>
+            <input type="checkbox" id={periodo} value={periodo} onChange={onChange}/>
             <section className="label-info">
-                <label for="manha" className="periodo">{periodo}</label>
-                <label for="manha">{horario} </label>
+                <label id={periodo} className="periodo">{periodo}</label>
+                <label id={periodo}>{horario} </label>
             </section>
         </div>
 

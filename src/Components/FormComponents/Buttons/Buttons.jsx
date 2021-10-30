@@ -4,8 +4,8 @@ import './Buttons.css'
 const Buttons = () => {
     return(
         <div className="buttons">
-            <button className="btn-serch-unit">Encontrar unidade</button>
-            <button className="btn-clean">Limpar</button>
+            <button type="submit" className="btn-serch-unit">Encontrar unidade</button>
+            <button type="submit" className="btn-clean">Limpar</button>
 
         </div>
 
