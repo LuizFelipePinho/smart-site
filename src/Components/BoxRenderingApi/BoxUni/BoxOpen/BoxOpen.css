@@ -1,0 +1,16 @@
+.titleOpenTrue, .titleOpenFalse {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+
+}
+
+.titleOpenTrue {
+    color: #76D26D;
+
+}
+
+.titleOpenFalse {
+    color: #E24240;    
+}

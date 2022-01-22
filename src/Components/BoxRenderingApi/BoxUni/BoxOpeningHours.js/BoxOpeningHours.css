@@ -1,0 +1,22 @@
+.containerOpeningHours {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.infoOpBox {
+    margin-right: 1rem;
+    width: 7rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.infoOpeningDays {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.infoOpHours {
+    font-size: 1rem; 
+}

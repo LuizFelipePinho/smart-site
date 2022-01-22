@@ -1,0 +1,8 @@
+.containerBoxUni {
+    width: 16.4rem;
+    border: solid rgba(226, 224, 224, 0.966) 2px;
+    padding: 1rem;
+    background-color: #f1eeeef3;
+    margin-top: 3rem;
+    border-radius: 1rem;
+}
