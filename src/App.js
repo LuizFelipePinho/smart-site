@@ -5,6 +5,7 @@ import Opening from './Components/Opening/Opening';
 import Form from './Components/FormComponents/Form/Form';
 import Protocol from './Components/Protocol/Protocol';
 import BoxRenderingApi from './Components/BoxRenderingApi/BoxRenderingApi';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Protocol />
       <BoxRenderingApi />
     </Container>
+    <Footer />
     </>
   );
 }
