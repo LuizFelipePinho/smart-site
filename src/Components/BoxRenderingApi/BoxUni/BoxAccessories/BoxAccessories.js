@@ -8,20 +8,40 @@ import imgFountainPartil from './images/partial-fountain.png'
 import imgFountainForbidden from './images/forbidden-fountain.png'
 import imgLockrromForbidden from './images/forbidden-lockerroom.png'
 import imgLockrromPartial from './images/partial-lockerroom.png'
+import imgLockrromFree from './images/required-lockerroom.png'
 
-const BoxAccessories = ({mask, towel, fountain, locker_room}) => {
-    
+const BoxAccessories = ({dataAcessories}) => {
+    console.log(dataAcessories.mask, dataAcessories.towel, dataAcessories.fountain, dataAcessories.lockerRoom)
+
+    let imgMask, imgTowel, imgFoutain, imgLockrrom;
+
+    dataAcessories.mask === 'required' ? imgMask = <img className='acessssoriesImgbox' src={imgMaskRequired} ></img> :  imgMask = <img className='acessssoriesImgbox' src={imgMaskRecommended}></img>
+
+    dataAcessories.towel === 'required' ? imgTowel = <img className='acessssoriesImgbox' src={imgTowelRequired}></img> : imgTowel = <img className='acessssoriesImgbox' src={imgTowelRecommended}></img>
+
+    dataAcessories.fountain === 'partial' ? imgFoutain = <img className='acessssoriesImgbox' src={imgFountainPartil}></img> : imgFoutain = <img className='acessssoriesImgbox' src={imgFountainForbidden}></img>
+
+    if(dataAcessories.lockerRoom === 'allowed') {
+        imgLockrrom = <img className='acessssoriesImgbox' src={imgLockrromFree}></img>
+
+    } else if (dataAcessories.lockerRoom === 'partial') {
+        imgLockrrom = <img className='acessssoriesImgbox' src={imgLockrromPartial}></img>
+
+    } else {
+        imgLockrrom = <img className='acessssoriesImgbox' src={imgLockrromForbidden}></img>
+
+    }
 
     return (
         <div>
-            <img className='acessssoriesImgbox' src={imgMaskRequired} ></img>
-            {/* <img src={imgMaskRecommended}></img> */}
-            <img className='acessssoriesImgbox' src={imgTowelRequired}></img>
-            {/* <img src={imgTowelRecommended}></img> */}
-            <img className='acessssoriesImgbox' src={imgFountainPartil}></img>
-            {/* <img src={imgFountainForbidden}></img> */}
-            {/* <img src={imgLockrromPartial}></img> */}
-            <img className='acessssoriesImgbox' src={imgLockrromForbidden}></img>
+           
+            {imgMask}
+
+            {imgTowel}
+
+            {imgFoutain}
+
+            {imgLockrrom}
 
 
         </div>

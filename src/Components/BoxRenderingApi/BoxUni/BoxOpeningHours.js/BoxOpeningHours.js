@@ -1,22 +1,23 @@
 import './BoxOpeningHours.css'
 
 const BoxOpeningHours = ({schedules}) => {
+    console.log(schedules)
     return(
         <div className='containerOpeningHours'>
 
             <div className='infoOpBox'>
-                <p className='infoOpeningDays'>Seg. à Sex.</p>
-                <p className='infoOpHours'>06h às 22h</p>
+                <p className='infoOpeningDays'>{schedules[0].weekdays}</p>
+                <p className='infoOpHours'>{schedules[0].hour}</p>
             </div> 
 
             <div className='infoOpBox'> 
-                <p className='infoOpeningDays'>Sáb</p>
-                <p lassName='infoOpHours'>09h às 18h</p>
+                <p className='infoOpeningDays'>{schedules[1].weekdays}</p>
+                <p className='infoOpHours'>{schedules[1].hour}</p>
             </div>
 
             <div className='infoOpBox'>
-                <p className='infoOpeningDays'>Dom.</p>
-                <p>Fechada</p>
+                <p className='infoOpeningDays'>{schedules[2].weekdays}</p>
+                <p className='infoOpHours'>{schedules[2].hour}</p>
             </div>
 
         </div>

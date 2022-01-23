@@ -5,19 +5,26 @@ import BoxAdress from './BoxAdress.js/BoxAdress';
 import BoxAccessories from './BoxAccessories/BoxAccessories';
 import BoxOpeningHours from './BoxOpeningHours.js/BoxOpeningHours';
 
-const BoxUni = () => {
+const BoxUni = ({data}) => {
 
-    const address = {
-        street: 'Rua tiburicio Cavalvante, 1887 - Meirelles',
-        region: 'Fortaleza, CE',
+    // const address = {
+    //     street: 'Rua tiburicio Cavalvante, 1887 - Meirelles',
+    //     region: 'Fortaleza, CE',
+    // }
+
+    const dataAcessories = {
+        mask: data.mask,
+        towel: data.towel,
+        fountain: data.fountain,
+        lockerRoom: data.locker_room
     }
     return(
         <div className="containerBoxUni">
-            <BoxOpen open={'Aberto'}/>
-            <BoxTitle title={'Vicente Linhares'}/>
-            <BoxAdress adress={address}/>
-            <BoxAccessories />
-            <BoxOpeningHours />
+            <BoxOpen open={data.opened}/>
+            <BoxTitle title={data.title}/>
+            <BoxAdress adress={data.content}/>
+            <BoxAccessories dataAcessories={dataAcessories} />
+            <BoxOpeningHours schedules={data.schedules}/>
         </div>
     )
 } 

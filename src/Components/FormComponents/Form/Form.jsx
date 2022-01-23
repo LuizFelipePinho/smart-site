@@ -37,9 +37,6 @@ const Form = () => {
             <HeaderForm />
             <MessageForm message="Qual periodo quer treinar?"/>
             <form onSubmit={ handleSubmit}> 
-                {/* <LineInput onClick={handleChange} periodo="manha" horario="06:00 às 12:00"/> */}
-                {/* <LineInput onClick={handleChange} periodo="tarde" horario="12:01 às 18:00"/> */}
-                {/* <LineInput onClick={handleChange} periodo="noite" horario="18:01 às 23:00"/> */}
 
                 <div className="line-form"> 
                     <input 
@@ -88,9 +85,6 @@ const Form = () => {
                         <label id="noite">18:01 às 23:00</label>
                     </section>
                 </div>
-
-
-                {/* <CloseUnit closed={closeUnitFunc}/>      */}
 
 
                 <div className="box-closeUnit">
