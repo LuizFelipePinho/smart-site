@@ -9,7 +9,7 @@
     font-weight: 600;
 }
 
-.message {
+.messageOpening {
     text-align: justify;
-    
+    font-size: 1rem;
 }

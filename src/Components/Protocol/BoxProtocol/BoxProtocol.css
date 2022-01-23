@@ -1,5 +1,10 @@
 .msg-protocol::first-letter  {
     text-transform: capitalize;
+
+}
+.msg-protocol {
+    font-size: 0.9rem;
+    margin: 1rem;
 }
 
 .box-img-info {
@@ -7,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     width: 5.5rem;
+
 }
 
 .box-img-info img {
