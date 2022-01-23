@@ -1,7 +1,6 @@
 import './BoxOpeningHours.css'
 
 const BoxOpeningHours = ({schedules}) => {
-    console.log(schedules)
     return(
         <div className='containerOpeningHours'>
 

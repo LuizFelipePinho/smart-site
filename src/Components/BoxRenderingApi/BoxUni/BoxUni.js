@@ -7,10 +7,6 @@ import BoxOpeningHours from './BoxOpeningHours.js/BoxOpeningHours';
 
 const BoxUni = ({data}) => {
 
-    // const address = {
-    //     street: 'Rua tiburicio Cavalvante, 1887 - Meirelles',
-    //     region: 'Fortaleza, CE',
-    // }
 
     const dataAcessories = {
         mask: data.mask,

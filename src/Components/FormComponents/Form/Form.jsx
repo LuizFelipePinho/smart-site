@@ -4,20 +4,24 @@ import HeaderForm from '../HeaderForm/HeaderForm';
 import MessageForm from '../MessageForm/MessageForm';
 import Buttons from '../Buttons/Buttons';
 import { useState } from 'react';
-
+import LocalStorage from '../../../utils/LocalStorage/LocalStorage';
 
 const Form = () => {
     const [seletedOption, setseletedOption] = useState('')
     const [closeUnit, setcloseUnit] = useState(false)
+	const [selectValue, setSelectValue] = useState("RJ");
 
     const handleSubmit = (evento) => {
         evento.preventDefault();
 
         const form = {
             period: seletedOption,
-            open: closeUnit
+            UF: selectValue,
+            displayClosed: closeUnit
         }
+
         console.log(form);
+        LocalStorage.savaDataForm(form)
 
     }
 
@@ -31,6 +35,23 @@ const Form = () => {
         !closeUnit ? setcloseUnit(true) : setcloseUnit(false) 
 
     }
+
+    const list = [
+        { name: "RJ" },
+		{ name: "SP" },
+		{ name: "CE" },
+		{ name: "MG" },
+		{ name: "RN" },
+		{ name: "BA" },
+		{ name: "PE" },
+		{ name: "RR" },
+		{ name: "AL" },
+		{ name: "PB" },
+		{ name: "MT" },
+		{ name: "ES" },
+		{ name: "GO" },
+		{ name: "AP" },
+	];
 
     return(
         <div className="form">
@@ -82,9 +103,29 @@ const Form = () => {
                     />
                     <section className="label-info">
                         <label id="noite" className="noite" >Noite</label>
-                        <label id="noite">18:01 às 23:00</label>
+                        <label id="noite">18:01 às 22:00</label>
                     </section>
                 </div>
+
+                <div className="line-form "> 
+                    <section className="label-info selectOption">
+                        <p className='formUF'>UF: </p>
+
+                        <select
+                            value={selectValue}
+                            onChange={ event => setSelectValue(event.target.value)}
+                            class="form-select"
+                            >
+                            {
+                                list.map( item => (
+                                    <option value={item.name}>{item.name}</option>
+                                ))
+                            }
+                    </select>
+                   </section>
+
+                </div>
+
 
 
                 <div className="box-closeUnit">

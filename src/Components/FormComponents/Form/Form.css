@@ -35,3 +35,18 @@
 }
 
 
+.selectOption {
+    justify-content: space-between;
+}
+.form-select {
+    width: 5rem;
+    height: 1.8rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border: none;
+    color: black;
+}
+
+.formUF {
+    margin-left: 0.4rem;
+}

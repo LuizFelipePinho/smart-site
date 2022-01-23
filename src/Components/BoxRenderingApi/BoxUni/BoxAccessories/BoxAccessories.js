@@ -11,7 +11,6 @@ import imgLockrromPartial from './images/partial-lockerroom.png'
 import imgLockrromFree from './images/required-lockerroom.png'
 
 const BoxAccessories = ({dataAcessories}) => {
-    console.log(dataAcessories.mask, dataAcessories.towel, dataAcessories.fountain, dataAcessories.lockerRoom)
 
     let imgMask, imgTowel, imgFoutain, imgLockrrom;
 
