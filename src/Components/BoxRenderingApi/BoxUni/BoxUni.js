@@ -7,7 +7,6 @@ import BoxOpeningHours from './BoxOpeningHours.js/BoxOpeningHours';
 
 const BoxUni = ({data}) => {
 
-
     const dataAcessories = {
         mask: data.mask,
         towel: data.towel,

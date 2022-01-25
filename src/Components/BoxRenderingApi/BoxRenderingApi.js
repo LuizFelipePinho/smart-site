@@ -9,53 +9,66 @@ const BoxRenderingApi = () => {
     const [ data, setData ] = useState([])
     
     useEffect(  () => {
-        api.getData.then( (res) => {
-            setData(res.data.locations.splice(0,116))
-            FilterDataUF(res.data.locations.splice(0,116))
+        api().then( (res) => {
+            
+            // const dataRes = res.data.locations.splice(0,116) 
+            // console.log(dataRes)
+            filUf(fixDataAPI(res))
+            // setData(dataRes)
         })
         .catch((err) => console.log(err))
         
 
     }, [])
 
-    const dataForm = LocalStorage.getDataForm()
-    console.log(dataForm)
+    /*
+        processo de solução
 
-    // let address = data.content
-    // let streetSeparate = address.split(";")
-    // let region = streetSeparate[1].replace('<br>', ' ').replace('</p>', '')
+    1º - botão de encotrar unidade é clicado e os dados do formulário são salvos em localstorage
+    2º - preciso pegar em cada unidade o horario e a uf de cada unidade
+    
+    
+    */
+   const fixDataAPI = (res) => {
+    const dataRes = res.data.locations.splice(0,116)
+    dataRes.splice(112, 1)
 
-    // fazer uma função que sera executada quando receber os dados da api lá no effect
-    // nessa função devemos fazer um filter e dentro temos que arrumar uma forma de pegar a UF 
+    return dataRes
 
-    const FilterDataUF = (data) => {
+   }
+  
+   
+    const filUf = (valor, UF) => {
+        let UfTeste = 'RJ';
 
-        const dataUF = data.map((elemento) => {
-            let address = elemento.content;
-            return address
+        for(let i = 0; i <= valor.length; i++) {
+            
 
-            // let streetSeparate = address.split(";")
-            // let region = streetSeparate[1].replace('<br>', ' ').replace('</p>', '')
-            // let uf = region.split(",")
-            // return uf
+            // O split vai dividir a string que veio da api e retorna uma lista
+            const streetSeparate = valor[i].content.split(" ")
 
+            // dentro da lista o ultimo quase sempre armazena a UF 
+            const lastStreet = streetSeparate[streetSeparate.length - 1]
+            
+            // se esse elemento que possivelmente está armazenado a UF conter a uf passada como parametro, mostre ela
+            if(lastStreet.includes(UfTeste)) {
+                // console.log(valor[i])
 
+            }
 
-        })
-
-        // return dataUF
-        console.log(dataUF)
-
-
+        }
 
     }
 
+
+
     return(
         <div className="containerBoxUniRender">
+            {/* <button onClick={() => filUfAndHours(data)}>Teste</button> */}
             { data.map( (unidade, index) => {
                 
                 if(index <= 2) {
-                    return( <BoxUni data={unidade}/>)
+                    return( <BoxUni key={unidade.id} data={unidade}/>)
                 }
             })}
 

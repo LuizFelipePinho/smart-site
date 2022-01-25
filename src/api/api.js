@@ -1,10 +1,8 @@
 import axios from 'axios'
 
-const api = {
+const api = async () => {
 
-    getData: axios.get("https://test-frontend-developer.s3.amazonaws.com/data/locations.json")
-    // .then( (res) => res.data)
-    // .catch( (err) => err)
+    return await axios.get("https://test-frontend-developer.s3.amazonaws.com/data/locations.json")
 }
 
 export default api

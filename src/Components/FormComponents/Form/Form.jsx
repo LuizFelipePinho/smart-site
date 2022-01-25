@@ -5,6 +5,7 @@ import MessageForm from '../MessageForm/MessageForm';
 import Buttons from '../Buttons/Buttons';
 import { useState } from 'react';
 import LocalStorage from '../../../utils/LocalStorage/LocalStorage';
+import MatchUni from '../../../utils/MatchUni/MatchUni';
 
 const Form = () => {
     const [seletedOption, setseletedOption] = useState('')
@@ -22,6 +23,9 @@ const Form = () => {
 
         console.log(form);
         LocalStorage.savaDataForm(form)
+
+        // executa a procura 
+        console.log(MatchUni())
 
     }
 
