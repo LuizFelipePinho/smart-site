@@ -5,12 +5,14 @@ import MessageForm from '../MessageForm/MessageForm';
 import Buttons from '../Buttons/Buttons';
 import { useState } from 'react';
 import LocalStorage from '../../../utils/LocalStorage/LocalStorage';
-import MatchUni from '../../../utils/MatchUni/MatchUni';
+// import MatchUni from '../../../utils/FilterUF/FilterUF';
+import FilterUF from '../../../utils/FilterUF/FilterUF';
 
 const Form = () => {
     const [seletedOption, setseletedOption] = useState('')
     const [closeUnit, setcloseUnit] = useState(false)
 	const [selectValue, setSelectValue] = useState("RJ");
+    const [dataSearch, setDataSearch] = useState([])
 
     const handleSubmit = (evento) => {
         evento.preventDefault();
@@ -22,10 +24,13 @@ const Form = () => {
         }
 
         console.log(form);
-        LocalStorage.savaDataForm(form)
+        LocalStorage.savaData("dataForm", form)
 
-        // executa a procura 
-        console.log(MatchUni())
+        const dataAPI  = LocalStorage.getData('dataAPI')
+
+        const dataAPIUF = FilterUF(dataAPI, form)
+        
+        setDataSearch(dataAPIUF)
 
     }
 
@@ -61,7 +66,7 @@ const Form = () => {
         <div className="form">
             <HeaderForm />
             <MessageForm message="Qual periodo quer treinar?"/>
-            <form onSubmit={ handleSubmit}> 
+            <form > 
 
                 <div className="line-form"> 
                     <input 
@@ -139,7 +144,7 @@ const Form = () => {
                     </div>
 
                     <div className="quantitClosed">
-                        <p>Resultado encontrados: </p>
+                        <p>Resultado encontrados: {dataSearch.length} </p>
 
                     </div>
                  </div>

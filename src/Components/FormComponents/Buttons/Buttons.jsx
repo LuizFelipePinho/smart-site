@@ -3,9 +3,7 @@ import './Buttons.css'
 
 const Buttons = ({onSubmit}) => {
 
-    const handleForm = (event) => {
-        console.log(event)
-    }
+   
     return(
         <div className="buttons">
             <button type="submit" className="btn-serch-unit" onClick={onSubmit}>Encontrar unidade</button>

@@ -2,12 +2,12 @@
 const LocalStorage = {
 
 
-    savaDataForm(data) {
-        localStorage.setItem('dataForm', JSON.stringify(data))
+    savaData(nameKay, data) {
+        localStorage.setItem(nameKay, JSON.stringify(data))
     },
 
-    getDataForm() {
-        const data = localStorage.getItem('dataForm');
+    getData(nameKay) {
+        const data = localStorage.getItem(nameKay);
         if(!data) {
             return null
         }
@@ -16,8 +16,8 @@ const LocalStorage = {
         return parsedData
     },
 
-    clearData() {
-        localStorage.removeItem('dataForm')
+    clearData(nameKay) {
+        localStorage.removeItem(nameKay)
     }
 }
 
