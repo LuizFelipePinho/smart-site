@@ -63,6 +63,13 @@ const Form = () => {
 		{ name: "AP" },
 	];
 
+    const ClearForm = (e) => {
+        e.preventDefault()
+        setseletedOption('')
+        setcloseUnit(false)
+        setDataSearch([])
+
+    }
     return(
         <>
         <div className="form">
@@ -151,7 +158,7 @@ const Form = () => {
                     </div>
                  </div>
 
-                <Buttons onSubmit={handleSubmit}/>           
+                <Buttons onSubmit={handleSubmit} clear={ClearForm}/>           
              
             
             </form>
