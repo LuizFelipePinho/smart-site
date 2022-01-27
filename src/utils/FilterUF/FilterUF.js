@@ -1,16 +1,3 @@
-import { useEffect } from 'react'
-import api from '../../api/api'
-import LocalStorage from '../LocalStorage/LocalStorage'
-
-/*
-    bora separar todas essas funções
-
-    1º - assim que a pagina for renderizada devemos pegar o resultado da api e armazenar em um variavel de estado
-    2º - ao clicar no botão devemos executar uma função que faça essa procura dentro dos dados recebidos da api
-
-*/
-
-
 
 const FilterUF = (valor, form) => {
     let UF = form.UF
@@ -45,8 +32,14 @@ const FilterUF = (valor, form) => {
         } 
 
     }
-    // console.log(listaUni)
     return listaUni
 }
+
+
+
+
+
+
+
 
 export default FilterUF

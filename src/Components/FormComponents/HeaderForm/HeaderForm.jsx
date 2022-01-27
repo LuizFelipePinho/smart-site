@@ -5,7 +5,7 @@ import './HeaderForm.css'
 const HeaderForm = () => {
     return(
         <div className="Header">
-            <img src={IconHour} />
+            <img src={IconHour} alt="imgHeader"/>
             <p>Horário</p>
         </div>
     )
