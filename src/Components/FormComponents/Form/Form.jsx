@@ -8,12 +8,27 @@ import LocalStorage from '../../../utils/LocalStorage/LocalStorage';
 import FilterUF from '../../../utils/FilterUF/FilterUF';
 import Protocol from '../../Protocol/Protocol';
 import BoxRenderingApi from '../../BoxRenderingApi/BoxRenderingApi'
+import { useEffect } from 'react/cjs/react.development';
+import api from '../../../api/api'
+import FixDataAPI from '../../../utils/FixDataAPI/FixDataAPI';
+
 
 const Form = () => {
     const [seletedOption, setseletedOption] = useState('')
     const [closeUnit, setcloseUnit] = useState(false)
 	const [selectValue, setSelectValue] = useState("RJ");
     const [dataSearch, setDataSearch] = useState([])
+
+
+    useEffect( () => {
+        api().then((res) => {
+            // console.log(res.data.locations)
+            setDataSearch(res.data.locations)
+        }).catch((err) => console.log(err))
+
+    }, [])
+
+
 
     const handleSubmit = (evento) => {
         evento.preventDefault();
@@ -24,14 +39,15 @@ const Form = () => {
             displayClosed: closeUnit
         }
 
-        LocalStorage.savaData("dataForm", form)
 
-        const dataAPI  = LocalStorage.getData('dataAPI')
+        // arruma os dados vindo da api 
+        const dataFixAPI = FixDataAPI(dataSearch)
 
-        const dataAPIUF = FilterUF(dataAPI, form)
+        // console.log(dataSearch)
+        // const dataAPIFilter = FilterUF(dataSearch, form)
         
-        // GetDataFilter(dataAPIUF)
-        setDataSearch(dataAPIUF)
+        // console.log(dataAPIFilter)
+        // setDataSearch(dataAPIFilter)
 
     }
 
@@ -164,7 +180,7 @@ const Form = () => {
             </form>
         </div>
         <Protocol />
-        <BoxRenderingApi data={dataSearch}/>
+        {/* <BoxRenderingApi data={dataSearch}/> */}
         </>
     )
 }

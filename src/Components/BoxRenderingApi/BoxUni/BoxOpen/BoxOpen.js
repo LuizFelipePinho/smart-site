@@ -2,14 +2,13 @@ import './BoxOpen.css'
 
 const BoxOpen = ({open}) => {
     let titleOpenOrClosed;
-    let openMock = true
 
-    if( openMock ) {
+    if( open ) {
         titleOpenOrClosed = {
             titleOpen: 'titleOpenTrue', 
             msgOpen: 'Aberto'
         } 
-    } else if (openMock === false) {
+    } else if (open === false) {
         titleOpenOrClosed = {
             titleOpen: 'titleOpenFalse', 
             msgOpen: 'Fechado'
