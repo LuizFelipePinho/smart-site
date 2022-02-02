@@ -1,44 +1,10 @@
 
-// const ComparePeriod = (data, period) => {
-
-//     let semanaHour = data.schedules[0].hour
-//     let sabHour = data.schedules[1].hour
-//     let domHour = data.schedules[2].hour
-
-//     // devemos mostrar a unidade que tiver o horario solicitado disponivel
-//     // vamos receber em period se é manha, tarde ou a noite
-//     // transformar os dados da api em um formato que tenha o horario de manha, da tarde e noite
-    
-//     let semanaSplitado = semanaHour.split(" ")
-//     let abertura = semanaSplitado.shift()
-//     let fechamento = semanaSplitado.pop()
-
-    
-
-//     console.log(fechamento)
-    
-
-//     // console.log('abertura ' + abertura.slice(0, 2))
-//     console.log(fechamento)
-//     // console.log(semanaHour)
-
-
-//     // if(period === "manha") {
-        
-//     // }
-
-
-
-
-// }
-
-
+// devolve somente o elemeto que teve a UF procurada, mas tenho que implementar a busca pelo horario
 const FilterUF = (valor, form) => {
     let UFInput = form.UF
     let closed = form.displayClosed
     let period = form.period
     //preciso pegar os dados que da hora
-
 
 
 

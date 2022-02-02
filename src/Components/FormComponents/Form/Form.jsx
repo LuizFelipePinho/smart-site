@@ -4,14 +4,13 @@ import HeaderForm from '../HeaderForm/HeaderForm';
 import MessageForm from '../MessageForm/MessageForm';
 import Buttons from '../Buttons/Buttons';
 import { useState } from 'react';
-import LocalStorage from '../../../utils/LocalStorage/LocalStorage';
 import FilterUF from '../../../utils/FilterUF/FilterUF';
 import Protocol from '../../Protocol/Protocol';
 import BoxRenderingApi from '../../BoxRenderingApi/BoxRenderingApi'
 import { useEffect } from 'react/cjs/react.development';
 import api from '../../../api/api'
 import FixDataAPI from '../../../utils/FixDataAPI/FixDataAPI';
-
+import FilterPeriod from '../../../utils/FilterPeriod/FilterPeriod'
 
 const Form = () => {
     const [seletedOption, setseletedOption] = useState('')
@@ -44,10 +43,14 @@ const Form = () => {
         // arruma os dados vindo da api 
         const dataFixAPI = FixDataAPI(dataAPI)
         
-        //filtra a partir dos dados vindo do formulario
+        //filtra a partir da UF vindo do formulario
         const dataAPIFilter = FilterUF(dataFixAPI, form)
+
+        const dataAPIFilterCompleted =  FilterPeriod(dataAPIFilter, form)
+
+
         
-        setDataSearch(dataAPIFilter)
+        setDataSearch(dataAPIFilterCompleted)
         setRenderUni(true)
 
     }

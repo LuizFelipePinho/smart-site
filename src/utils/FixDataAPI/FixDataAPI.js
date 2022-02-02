@@ -9,7 +9,6 @@ const FixDataAPI =  (data) => {
 
     let dataAt = []
 
-    console.log(data)
    for(let i = 0; i < data.length; i++) {
 
     if(data[i].content.length <= 2) {
