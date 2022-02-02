@@ -23,7 +23,7 @@ const FilterPeriod = (data, form) => {
             dataAt.push(data[index])
 
 
-        } else if (form.period === 'noite' && (  (semanaAbertura <= 18 && semanaAbertura < 22) && semanaFechamento >= 22)) {
+        } else if (form.period === 'noite' && (  (semanaAbertura <= 18 && semanaAbertura < 22) && (semanaFechamento <= 22) && semanaFechamento >= 21) ){
             dataAt.push(data[index])
 
 
