@@ -17,13 +17,14 @@ const Form = () => {
     const [seletedOption, setseletedOption] = useState('')
     const [closeUnit, setcloseUnit] = useState(false)
 	const [selectValue, setSelectValue] = useState("RJ");
+    const [ dataAPI, setDataAPI] = useState([])
     const [dataSearch, setDataSearch] = useState([])
+    const [renderUni, setRenderUni ] = useState(false)
 
 
     useEffect( () => {
         api().then((res) => {
-            // console.log(res.data.locations)
-            setDataSearch(res.data.locations)
+            setDataAPI(res.data.locations)
         }).catch((err) => console.log(err))
 
     }, [])
@@ -41,13 +42,13 @@ const Form = () => {
 
 
         // arruma os dados vindo da api 
-        const dataFixAPI = FixDataAPI(dataSearch)
-
-        // console.log(dataSearch)
-        // const dataAPIFilter = FilterUF(dataSearch, form)
+        const dataFixAPI = FixDataAPI(dataAPI)
         
-        // console.log(dataAPIFilter)
-        // setDataSearch(dataAPIFilter)
+        //filtra a partir dos dados vindo do formulario
+        const dataAPIFilter = FilterUF(dataFixAPI, form)
+        
+        setDataSearch(dataAPIFilter)
+        setRenderUni(true)
 
     }
 
@@ -180,7 +181,7 @@ const Form = () => {
             </form>
         </div>
         <Protocol />
-        {/* <BoxRenderingApi data={dataSearch}/> */}
+        { renderUni ?  <BoxRenderingApi data={dataSearch}/> : ' '   }
         </>
     )
 }

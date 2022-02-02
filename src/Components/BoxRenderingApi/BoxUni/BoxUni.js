@@ -17,9 +17,9 @@ const BoxUni = ({data}) => {
         <div className="containerBoxUni">
             <BoxOpen open={data.opened}/>
             <BoxTitle title={data.title}/>
-            <BoxAdress adress={data.content}/>
-            <BoxAccessories dataAcessories={dataAcessories} />
-            <BoxOpeningHours schedules={data.schedules}/>
+            <BoxAdress adress={data.adress}/>
+             <BoxAccessories dataAcessories={dataAcessories} />
+             <BoxOpeningHours schedules={data.schedules}/>
         </div>
     )
 } 

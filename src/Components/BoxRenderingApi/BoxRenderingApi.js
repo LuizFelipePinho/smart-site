@@ -3,7 +3,6 @@ import BoxUni from './BoxUni/BoxUni'
 
 const BoxRenderingApi = ({data}) => {
 
-
     return(
         <div className="containerBoxUniRender">
             { data.map( (unidade) => {
