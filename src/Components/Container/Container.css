@@ -1,3 +1,7 @@
 .container {
     padding: 3% 15% 3% 15%;
 }
+
+.containerGeral {
+    width: 100%;
+}

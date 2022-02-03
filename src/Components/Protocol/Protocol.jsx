@@ -9,8 +9,6 @@ import garraOpc from './images/partial-fountain.png';
 import vestiLib from './images/required-lockerroom.png';
 import vestiPar from './images/partial-lockerroom.png';
 import vestiProi from './images/forbidden-lockerroom.png';
-
-
 import BoxProtocol from "./BoxProtocol/BoxProtocol";
 import CotainerProtocol from './ContainerProtocol/ContainerProtocol';
 

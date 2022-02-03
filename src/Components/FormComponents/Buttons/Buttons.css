@@ -1,17 +1,19 @@
 .buttons {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
 
 .btn-serch-unit, .btn-clean {
     text-transform: uppercase;
-    padding: 1rem 4rem 1rem 4rem;
+    padding: 0.7rem 3rem 0.7rem 3rem;
     border: none;
     margin: 1rem;
     font-weight: 600;
     cursor: pointer;
+    font-size: 0.7rem;
 
 }
 

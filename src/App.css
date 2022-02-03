@@ -2,5 +2,10 @@
 
 body{
     font-family: 'Outfit', sans-serif;
-    border: solid black 2px;
+}
+
+.containerGeral {
+    display: flex;
+    flex-direction: column;
+    
 }
