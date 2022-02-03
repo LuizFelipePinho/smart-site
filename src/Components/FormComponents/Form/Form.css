@@ -10,7 +10,6 @@
     justify-content: flex-start;
     align-items: center;
     border-bottom: solid 1px rgba(0, 0, 0, 0.2);
-
     height: 3rem;
 
 }
@@ -50,3 +49,41 @@
 .formUF {
     margin-left: 0.4rem;
 }
+
+
+@media (max-width: 375px) {
+    
+    .line-form {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+        height: 4.2rem;
+        font-size: 1.1rem;
+    
+    } 
+
+    .typeRadioCss {
+        
+    }
+    
+    
+    .box-closeUnit{
+        display: flex;
+        flex-direction: column;
+        padding: 0.2rem;
+
+    }
+
+    .closeUnits {
+        padding-bottom: 1rem;
+    }
+
+    .quantitClosed{
+        padding-bottom: 1rem;
+        padding-left: 0.3rem;
+    }
+
+
+}
+    

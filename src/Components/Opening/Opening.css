@@ -23,3 +23,33 @@
     margin-bottom: 1rem;
 
 }
+
+@media (max-width: 375px) {
+    
+    .title {
+        font-size: 2rem;
+        width: 16rem;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        margin-top: 3rem;
+    }
+
+    .messageOpening {
+        text-align: justify;
+        font-size: 1.1rem;
+    }
+    
+    .spaceBlack {
+        border: solid black 2px;
+        width: 30%;
+        height: 1rem;
+        background-color: black;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    
+    }
+}

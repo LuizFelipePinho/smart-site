@@ -5,6 +5,13 @@
 }
 
 
+@media (max-width: 375px) {
+    .box-protocols {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 
 

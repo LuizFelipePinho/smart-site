@@ -15,3 +15,11 @@
     width: 10rem;
     height: 4rem;
 }
+
+@media (max-width: 375px) {
+    
+    .header {
+        width: 100vw;
+        height: 20vh;
+    }
+}

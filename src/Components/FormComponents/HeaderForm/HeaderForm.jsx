@@ -6,7 +6,7 @@ const HeaderForm = () => {
     return(
         <div className="Header">
             <img src={IconHour} alt="imgHeader"/>
-            <p>Horário</p>
+            <p className="headerHour">Horário</p>
         </div>
     )
 }
