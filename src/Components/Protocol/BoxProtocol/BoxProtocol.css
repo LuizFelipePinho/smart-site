@@ -20,3 +20,11 @@
     width: 4rem;
     margin-bottom: 0.5rem;
 }
+
+@media (max-width: 375px){
+    .box-img-info img {
+        height: 3.3rem;
+        width: 3.3rem;
+        margin-bottom: 0.5rem;
+    }
+}

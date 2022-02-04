@@ -5,3 +5,10 @@
 .containerGeral {
     width: 100%;
 }
+
+@media (max-width: 375px) {
+    .container {
+        padding: 1% 5% 1% 5%;
+    }
+
+}

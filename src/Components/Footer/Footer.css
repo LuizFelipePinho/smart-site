@@ -11,3 +11,12 @@
 .msgContainerFooter {
     color: white;
 }
+
+@media (max-width: 375px){
+    .containerFooter {
+        height: 10rem;
+        margin-bottom: 6rem;
+
+    }
+
+}
