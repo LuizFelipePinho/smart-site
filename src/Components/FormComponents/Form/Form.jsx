@@ -20,7 +20,6 @@ const Form = () => {
     const [dataSearch, setDataSearch] = useState([])
     const [renderUni, setRenderUni ] = useState(false)
 
-
     useEffect( () => {
         api().then((res) => {
             setDataAPI(res.data.locations)
@@ -31,6 +30,7 @@ const Form = () => {
 
 
     const handleSubmit = (evento) => {
+
         evento.preventDefault();
 
         const form = {
@@ -52,6 +52,7 @@ const Form = () => {
         
         setDataSearch(dataAPIFilterCompleted)
         setRenderUni(true)
+
 
     }
 
