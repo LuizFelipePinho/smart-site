@@ -5,6 +5,8 @@
     align-items: center;
     flex-direction: column;
     height: 10rem;
+    /* position: absolute; */
+    bottom: 0;
 
 }
 
@@ -15,7 +17,7 @@
 @media (max-width: 375px){
     .containerFooter {
         height: 10rem;
-        margin-bottom: 6rem;
+        /* margin-bottom: 6rem; */
 
     }
 
