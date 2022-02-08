@@ -3,8 +3,6 @@
 const FilterUF = (valor, form) => {
     let UFInput = form.UF
     let closed = form.displayClosed
-    let period = form.period
-    //preciso pegar os dados que da hora
 
 
 
