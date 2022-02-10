@@ -10,14 +10,16 @@ function App() {
   return (
     <div className='container-page'> 
     <Header />
-    <Container>
+     <Container>
       <Opening />
       <Form />
     </Container>
-    <Footer />
+   <Footer />
     </div>
   );
 }
 
 export default App;
 
+
+// protocol e openeing estão bugando a responsividade

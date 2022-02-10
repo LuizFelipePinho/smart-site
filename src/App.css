@@ -4,13 +4,15 @@ body{
     font-family: 'Outfit', sans-serif;
 }
 
-.containerGeral {
+
+.container-page {
     display: flex;
     flex-direction: column;
     
 }
 
-.container-page {
-    display: flex;
-    flex-direction: column;
-}
+/* @media (max-width: 190px) {
+    .containerGeralborder{ 
+        border: solid black 2px;
+    }
+} */

@@ -24,6 +24,10 @@
 
 }
 
+.containerOpening {
+    width: 100%;
+}
+
 @media (max-width: 375px) {
     
     .title {
@@ -51,5 +55,19 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
     
+    }
+}
+
+@media (max-width: 750px) {
+    .title {
+        margin-top: 1rem;
+    }
+
+}
+
+@media (max-width: 260px) {
+
+    .title {
+        font-size: 1.7rem;
     }
 }
