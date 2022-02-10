@@ -53,3 +53,10 @@ npm install
 Após terminar de instalar as dependeências do projeto, use o seguinte comando para abrir o projeto:
 </br>
 npm start 
+
+
+## Tecnologias usadas 
+
+- ReactJS 
+- CSS3
+- HTML5
