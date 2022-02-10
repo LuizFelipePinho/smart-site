@@ -50,7 +50,7 @@ Abra o terminal dentro da pasta do projeto e execute o seguinte comando:
 npm install
 
 
-Após terminar de instalar as dependeências do projeto, use o seguinte comando para abrir o projeto:
+Após terminar de instalar as dependências do projeto, use o seguinte comando para abrir o projeto:
 </br>
 npm start 
 
